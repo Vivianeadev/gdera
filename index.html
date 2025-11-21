@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GDERA | Global Digital Enterprise Registry for Government</title>
+    <title>GDERA Government | Global Digital Enterprise Registry</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -25,6 +25,7 @@
             --gradient-gold-hover: linear-gradient(135deg, #E5BF40 0%, #F9EBC8 50%, #C89610 100%);
             --gradient-dark: linear-gradient(135deg, #1A1A1A 0%, #0A0A0A 100%);
             --gradient-gold-text: linear-gradient(135deg, #D4AF37 0%, #F4E4B8 50%, #FFD700 100%);
+            --gov-blue: #0F3460;
         }
 
         * {
@@ -205,6 +206,17 @@
 
         .btn-secondary:hover {
             background: rgba(212, 175, 55, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .btn-gov {
+            background: var(--gov-blue);
+            color: white;
+            border: 1px solid var(--sapphire);
+        }
+
+        .btn-gov:hover {
+            background: #1a4a8a;
             transform: translateY(-3px);
         }
 
@@ -435,11 +447,10 @@
         .tech-card:hover {
             transform: translateY(-5px);
             border-color: var(--gold-primary);
-            box-shadow: var(--shadow-gold);
         }
 
         .tech-icon {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
             color: var(--gold-primary);
         }
@@ -479,15 +490,15 @@
             gap: 0.5rem;
         }
 
-        /* Benefícios Governo */
-        .benefits-grid {
+        /* Por que o governo precisa */
+        .gov-needs {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
 
-        .benefit-card {
+        .need-item {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 12px;
             padding: 2.5rem;
@@ -495,16 +506,15 @@
             transition: var(--transition);
         }
 
-        .benefit-card:hover {
+        .need-item:hover {
             transform: translateY(-5px);
             border-color: var(--gold-primary);
-            box-shadow: var(--shadow-gold);
         }
 
-        .benefit-card h3 {
+        .need-item h4 {
             font-family: 'Cinzel', serif;
             font-size: 1.5rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             color: var(--gold-primary);
         }
 
@@ -519,39 +529,6 @@
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-            text-align: left;
-        }
-
-        .footer-column h4 {
-            font-family: 'Cinzel', serif;
-            color: var(--gold-primary);
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-column ul li a {
-            color: var(--platinum);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-column ul li a:hover {
-            color: var(--gold-light);
         }
 
         .social-links {
@@ -645,18 +622,18 @@
     <header class="header">
         <nav class="nav-container">
             <div>
-                <div class="logo">GDERA</div>
-                <div class="logo-tagline">GLOBAL DIGITAL ENTERPRISE REGISTRY FOR GOVERNMENT</div>
+                <div class="logo">GDERA GOVERNMENT</div>
+                <div class="logo-tagline">GLOBAL DIGITAL ENTERPRISE REGISTRY</div>
             </div>
             <button class="mobile-menu-toggle" id="mobileMenuToggle">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#visao">Visão</a></li>
+                <li><a href="#como-funciona">Como Funciona</a></li>
                 <li><a href="#funcionalidades">Funcionalidades</a></li>
-                <li><a href="#fluxograma">Fluxo</a></li>
-                <li><a href="#pilares">Pilares</a></li>
-                <li><a href="#beneficios">Benefícios</a></li>
+                <li><a href="#fluxo">Fluxo Operacional</a></li>
+                <li><a href="#tecnologia">Tecnologia</a></li>
+                <li><a href="#governo">Por que o Governo?</a></li>
             </ul>
         </nav>
     </header>
@@ -664,52 +641,52 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Registro Global de Empresas</h1>
-            <p>O primeiro registro global de empresas e ativos 100% digital, auditável e imutável.</p>
+            <h1>O primeiro registro global de empresas e ativos 100% digital, auditável e imutável.</h1>
+            <p>Infraestrutura serverless com blockchain para transparência, segurança e eficiência no registro empresarial global.</p>
             <div class="cta-buttons">
                 <a href="#funcionalidades" class="btn btn-primary">
                     <i class="fas fa-crown"></i>
                     Conhecer o Sistema
                 </a>
-                <a href="#pilares" class="btn btn-secondary">
-                    <i class="fas fa-code"></i>
-                    Ver Tecnologia
+                <a href="#governo" class="btn btn-gov">
+                    <i class="fas fa-landmark"></i>
+                    Para Governos
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Visão Geral -->
-    <section id="visao" class="section">
+    <!-- Como Funciona -->
+    <section id="como-funciona" class="section">
         <div class="container">
             <h2 class="section-title">Como Funciona</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-server"></i>
+                        <i class="fas fa-cloud"></i>
                     </div>
                     <h3>Arquitetura Serverless</h3>
-                    <p>Infraestrutura 100% serverless para máxima escalabilidade, segurança e resiliência operacional.</p>
+                    <p>Infraestrutura 100% na nuvem sem servidores tradicionais, garantindo máxima disponibilidade.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fab fa-ethereum"></i>
                     </div>
                     <h3>Blockchain como Backend</h3>
-                    <p>Registros imutáveis em blockchain para garantir transparência e auditabilidade completa.</p>
+                    <p>EVM (Ethereum Virtual Machine) garante imutabilidade e transparência dos registros.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-file-contract"></i>
                     </div>
                     <h3>NFTs Jurídicos</h3>
-                    <p>Ativos reais representados por NFTs com validade jurídica para garantia de propriedade.</p>
+                    <p>Ativos reais representados digitalmente com validade legal em múltiplas jurisdições.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Funcionalidades Principais -->
+    <!-- Funcionalidades -->
     <section id="funcionalidades" class="section">
         <div class="container">
             <h2 class="section-title">Funcionalidades Principais</h2>
@@ -719,71 +696,71 @@
                         <i class="fas fa-building"></i>
                     </div>
                     <h3>Registro de Empresas</h3>
-                    <p>CNPJ global com endereço virtual válido em múltiplas jurisdições internacionais.</p>
+                    <p>CNPJ internacional com endereço virtual legalmente válido em múltiplas jurisdições.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
+                        <i class="fas fa-check-double"></i>
                     </div>
                     <h3>Compliance Automatizado</h3>
                     <p>Verificação automática de obrigações legais baseada na jurisdição da empresa.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-file-signature"></i>
+                        <i class="fas fa-file-contract"></i>
                     </div>
                     <h3>NFTs Jurídicos</h3>
-                    <p>Representação digital de ativos reais com validade legal e transparência total.</p>
+                    <p>Representação digital de ativos reais com validade legal e imutabilidade.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3>Auditoria em Tempo Real</h3>
-                    <p>Monitoramento contínuo de todas as transações e alterações nos registros.</p>
+                    <p>Monitoramento contínuo e relatórios automáticos para autoridades fiscais.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-user-tie"></i>
                     </div>
                     <h3>Painel do Gestor Público</h3>
-                    <p>Interface dedicada para autoridades governamentais com visão completa do sistema.</p>
+                    <p>Interface dedicada para análise e acompanhamento de registros empresariais.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-search-dollar"></i>
+                        <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Due Diligence Automatizada</h3>
-                    <p>Análise automatizada de riscos e conformidade para processos mais ágeis.</p>
+                    <h3>Segurança Avançada</h3>
+                    <p>Criptografia de ponta a ponta e verificação multi-fatorial para todos os acessos.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Fluxo Operacional -->
-    <section id="fluxograma" class="section">
+    <section id="fluxo" class="section">
         <div class="container">
             <h2 class="section-title">Fluxo Operacional</h2>
             <div class="flowchart">
                 <div class="flow-step">
                     <h4>1. Registrar</h4>
-                    <p>Empresa solicita registro no sistema</p>
+                    <p>Empresa solicita registro global</p>
                 </div>
                 <div class="flow-step">
                     <h4>2. Validar</h4>
-                    <p>Documentos são verificados automaticamente</p>
+                    <p>Documentos verificados automaticamente</p>
                 </div>
                 <div class="flow-step">
                     <h4>3. Emitir NFT</h4>
-                    <p>NFT jurídico é emitido para ativos</p>
+                    <p>NFT jurídico representa a empresa</p>
                 </div>
                 <div class="flow-step">
                     <h4>4. Compliance</h4>
-                    <p>Sistema verifica conformidade legal</p>
+                    <p>Verificação contínua de obrigações</p>
                 </div>
                 <div class="flow-step">
                     <h4>5. Auditoria</h4>
-                    <p>Registro fica disponível para auditoria</p>
+                    <p>Monitoramento em tempo real</p>
                 </div>
             </div>
         </div>
@@ -792,7 +769,7 @@
     <!-- Dashboard Preview -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title">Demonstração do Painel</h2>
+            <h2 class="section-title">Painel do Gestor Público</h2>
             <div class="dashboard-preview">
                 <div class="dashboard-grid">
                     <div class="dashboard-card">
@@ -800,123 +777,127 @@
                         <p class="price">1.247</p>
                     </div>
                     <div class="dashboard-card">
-                        <h4>Ativos Garantidos</h4>
-                        <p class="price">8.532</p>
+                        <h4>Compliance Ativo</h4>
+                        <p><span class="status-indicator status-active"></span> 92%</p>
                     </div>
                     <div class="dashboard-card">
-                        <h4>Compliance Rate</h4>
-                        <p><span class="status-indicator status-active"></span> 98.7%</p>
+                        <h4>Auditorias Hoje</h4>
+                        <p class="price">38</p>
                     </div>
                     <div class="dashboard-card">
-                        <h4>Transações Hoje</h4>
-                        <p class="price">347</p>
+                        <h4>NFTs Emitidos</h4>
+                        <p class="price">2.891</p>
                     </div>
                 </div>
                 
-                <h4 style="color: var(--gold-primary); margin-bottom: 1rem;">Ativos Recentemente Registrados:</h4>
+                <h4 style="color: var(--gold-primary); margin-bottom: 1rem;">Empresas em Destaque:</h4>
                 <div class="asset-preview">
                     <div class="asset-info">
-                        <span class="asset-type">Propriedade Comercial</span>
-                        <span class="asset-value">São Paulo - R$ 4.250.000</span>
+                        <span class="asset-type">TechGlobal Solutions Ltd.</span>
+                        <span class="asset-value">Singapura | Ativos: $15.200.000</span>
                     </div>
                     <div class="asset-status">
                         <span class="status-indicator status-active"></span>
-                        <span>Verificado</span>
+                        <span>Compliant</span>
                     </div>
                 </div>
                 <div class="asset-preview">
                     <div class="asset-info">
-                        <span class="asset-type">Frota de Veículos</span>
-                        <span class="asset-value">Rio de Janeiro - R$ 2.100.000</span>
+                        <span class="asset-type">GreenEnergy Corp</span>
+                        <span class="asset-value">Suíça | Ativos: $8.750.000</span>
                     </div>
                     <div class="asset-status">
-                        <span class="status-indicator status-active"></span>
-                        <span>Verificado</span>
+                        <span class="status-indicator status-pending"></span>
+                        <span>Documentação Pendente</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pilares Tecnológicos -->
-    <section id="pilares" class="section">
+    <!-- Tecnologias -->
+    <section id="tecnologia" class="section">
         <div class="container">
-            <h2 class="section-title">Pilares Tecnológicos</h2>
+            <h2 class="section-title">Tecnologias Utilizadas</h2>
             <div class="tech-grid">
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Segurança Máxima</h3>
-                    <p>Infraestrutura com certificação governamental e criptografia de padrão nacional</p>
-                </div>
                 <div class="tech-card">
                     <div class="tech-icon">
                         <i class="fas fa-bolt"></i>
                     </div>
-                    <h3>Alta Disponibilidade</h3>
-                    <p>Arquitetura distribuída globalmente com 99,9% de uptime garantido</p>
+                    <h3>Computação na Borda</h3>
+                    <p>Infraestrutura serverless de alta performance com execução distribuída globalmente.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Banco de Dados Distribuído</h3>
+                    <p>Armazenamento resiliente e sincronizado em múltiplas regiões geográficas.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Armazenamento Seguro</h3>
+                    <p>Solução de armazenamento robusta com criptografia de ponta a ponta.</p>
                 </div>
                 <div class="tech-card">
                     <div class="tech-icon">
                         <i class="fab fa-ethereum"></i>
                     </div>
-                    <h3>Blockchain Governamental</h3>
-                    <p>Registro imutável auditável por qualquer órgão autorizado</p>
+                    <h3>Blockchain EVM</h3>
+                    <p>Ethereum Virtual Machine para contratos inteligentes e registros imutáveis.</p>
                 </div>
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <i class="fas fa-file-contract"></i>
+            </div>
+
+            <div class="dashboard-preview" style="margin-top: 3rem;">
+                <h4 style="color: var(--gold-primary); margin-bottom: 1rem;">Vantagens da Arquitetura:</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                    <div>
+                        <h5 style="color: var(--gold-primary); margin-bottom: 0.5rem;">Escalabilidade Ilimitada</h5>
+                        <p style="color: var(--platinum);">Infraestrutura serverless escala automaticamente conforme a demanda.</p>
                     </div>
-                    <h3>NFTs com Validade Legal</h3>
-                    <p>Tokens digitais reconhecidos juridicamente como prova de propriedade</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <i class="fas fa-sync-alt"></i>
+                    <div>
+                        <h5 style="color: var(--gold-primary); margin-bottom: 0.5rem;">Custo Eficiente</h5>
+                        <p style="color: var(--platinum);">Só paga pelo que usa, sem custos de infraestrutura ociosa.</p>
                     </div>
-                    <h3>Interoperabilidade</h3>
-                    <p>Integração com sistemas governamentais existentes via APIs padronizadas</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <i class="fas fa-expand-arrows-alt"></i>
+                    <div>
+                        <h5 style="color: var(--gold-primary); margin-bottom: 0.5rem;">Segurança Máxima</h5>
+                        <p style="color: var(--platinum);">Proteção avançada contra ameaças com rede global distribuída.</p>
                     </div>
-                    <h3>Escalabilidade Ilimitada</h3>
-                    <p>Capacidade de processar milhões de registros sem degradação de performance</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefícios para o Governo -->
-    <section id="beneficios" class="section">
+    <!-- Por que o governo precisa -->
+    <section id="governo" class="section">
         <div class="container">
             <h2 class="section-title">Por que o Governo Precisa Disso?</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <h3>Transparência Total</h3>
-                    <p>Registros imutáveis em blockchain garantem transparência completa em todas as operações, reduzindo riscos de corrupção e aumentando a confiança pública.</p>
+            <div class="gov-needs">
+                <div class="need-item">
+                    <h4>Transparência Total</h4>
+                    <p>Registros imutáveis em blockchain permitem auditoria completa e transparente de todas as operações.</p>
                 </div>
-                <div class="benefit-card">
-                    <h3>Eficiência Operacional</h3>
-                    <p>Automatização de processos manuais reduz custos operacionais em até 70% e acelera o tempo de registro de semanas para minutos.</p>
+                <div class="need-item">
+                    <h4>Combate à Fraude</h4>
+                    <p>NFTs jurídicos impossibilitam falsificação de documentos e duplicação de registros.</p>
                 </div>
-                <div class="benefit-card">
-                    <h3>Segurança Jurídica</h3>
-                    <p>NFTs jurídicos garantem a propriedade de ativos com validade legal, reduzindo litígios e proporcionando maior segurança para investimentos.</p>
+                <div class="need-item">
+                    <h4>Eficiência Operacional</h4>
+                    <p>Automação de processos reduz custos administrativos e tempo de resposta.</p>
                 </div>
-                <div class="benefit-card">
-                    <h3>Auditoria em Tempo Real</h3>
-                    <p>Autoridades podem auditar transações e registros em tempo real, facilitando a fiscalização e o combate a irregularidades.</p>
+                <div class="need-item">
+                    <h4>Atração de Investimentos</h4>
+                    <p>Infraestrutura moderna atrai empresas globais e fortalece a economia digital.</p>
                 </div>
-                <div class="benefit-card">
-                    <h3>Interoperabilidade Global</h3>
-                    <p>Sistema compatível com múltiplas jurisdições, facilitando o comércio internacional e investimentos estrangeiros.</p>
+                <div class="need-item">
+                    <h4>Conformidade Internacional</h4>
+                    <p>Padrões globais facilitam acordos comerciais e cooperação entre países.</p>
                 </div>
-                <div class="benefit-card">
-                    <h3>Redução de Burocracia</h3>
-                    <p>Processos digitais eliminam papelada, filas e intermediários, tornando o registro de empresas mais ágil e acessível.</p>
+                <div class="need-item">
+                    <h4>Resiliência e Segurança</h4>
+                    <p>Arquitetura distribuída garante operação contínua mesmo em cenários de crise.</p>
                 </div>
             </div>
         </div>
@@ -925,44 +906,17 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <h4>GDERA Government</h4>
-                    <ul>
-                        <li><a href="#">Sobre o Sistema</a></li>
-                        <li><a href="#">Documentação</a></li>
-                        <li><a href="#">Política de Privacidade</a></li>
-                        <li><a href="#">Termos de Uso</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Recursos</h4>
-                    <ul>
-                        <li><a href="#">API para Desenvolvedores</a></li>
-                        <li><a href="#">Manuais de Integração</a></li>
-                        <li><a href="#">Casos de Uso</a></li>
-                        <li><a href="#">Perguntas Frequentes</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Contato</h4>
-                    <ul>
-                        <li><a href="#">Suporte Técnico</a></li>
-                        <li><a href="#">Parcerias Governamentais</a></li>
-                        <li><a href="#">Imprensa</a></li>
-                        <li><a href="#">Ouvidoria</a></li>
-                    </ul>
-                </div>
-            </div>
-            
             <div class="social-links">
                 <a href="#"><i class="fab fa-linkedin"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-github"></i></a>
             </div>
-            <p>&copy; 2024 GDERA - Global Digital Enterprise Registry for Government. Todos os direitos reservados.</p>
+            <p>&copy; 2024 GDERA Government. Todos os direitos reservados.</p>
             <p style="color: var(--gold-primary); font-size: 0.9rem; font-family: 'Cinzel', serif;">
-                "Tecnologia blockchain para transparência e eficiência governamental"
+                "Registro digital global com segurança blockchain para governos"
+            </p>
+            <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--gold-secondary);">
+                Uma iniciativa para modernização do registro empresarial global
             </p>
         </div>
     </footer>
